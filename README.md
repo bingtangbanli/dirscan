@@ -18,19 +18,20 @@
 
 ## 具体使用：
 
-1、根据自己的电脑自行下载https://github.com/pingc0y/go_proxy_pool 对应的版本，并启动过
+1、根据自己的电脑自行下载https://github.com/pingc0y/go_proxy_pool 对应的版本
+
+调整代理的配置文件config.yml，个人建议将tunnelTime: 60 改为tunnelTime: 2 。2秒换一次ip。其他的参数按个人需求调整
+
+      #隧道代理更换时间秒
+      tunnelTime: 2
+
+
+启动代理池
 
     ./goProxyPool-macos-amd64
     
   <img width="556" alt="图片" src="https://github.com/bingtangbanli/dirscan/assets/77956516/0b698b99-fe9b-4faa-af0d-d45a0f7efdf9">
 
-抓取代理
-
-    http://127.0.0.1:8080/spider
-
-验证代理
-
-    http://127.0.0.1:8080/verify
 
 等待抓代理和验证代理结束
 
@@ -73,11 +74,26 @@
 使用代理扫描速度会受到go_proxy_pool工具代理的影响
 
     python3 dirscan_d.py -u http://172.16.70.129:80 -d dic/test.txt -p http://127.0.0.1:8111
-    python3 dirscan_d.py -u http://172.16.70.129:80
-    python3 dirscan_d.py -u http://172.16.70.129:80 -d dic/test.txt -s 50
-    python3 dirscan_d.py -u http://172.16.70.129:80  -s 50
-    python3 dirscan_d.py -f urllist.txt -d dic/test.txt
-    python3 dirscan_d.py -f urllist.txt
+    python3 dirscan_d.py -u http://172.16.70.129:80 -p http://127.0.0.1:8111
+    python3 dirscan_d.py -u http://172.16.70.129:80 -d dic/test.txt -s 50 -p http://127.0.0.1:8111
+    python3 dirscan_d.py -u http://172.16.70.129:80  -s 50 -p http://127.0.0.1:8111
+    python3 dirscan_d.py -f urllist.txt -d dic/test.txt -p http://127.0.0.1:8111
     .........
 
-    
+网站服务器后台记录为不断更改的ip
+
+![图片](https://github.com/bingtangbanli/dirscan/assets/77956516/f598e46b-9c53-4922-818d-22e4ebed137a)
+
+（2）dirscan_s.py 随机UA+随机XFF+IP代理+多线程
+
+该脚本主要是取消了-s参数，其他的一样
+
+（3）add_slash.sh 梳理字典，给字典文件每行内容前加/
+
+使用介绍：将要处理的文本字典文件命名为 input.txt，放到同级目录下
+
+    chmod +x add_slash.sh
+    ./add_slash.sh
+
+运行脚本，脚本将在同一目录下生成一个名为 output.txt 的输出文件
+<img width="632" alt="图片" src="https://github.com/bingtangbanli/dirscan/assets/77956516/32c0c5e2-eb64-4120-a357-6fc0fd52a336">
