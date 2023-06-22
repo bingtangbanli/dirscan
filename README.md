@@ -1,5 +1,5 @@
 # dirscan
-简单介绍：随机UA+随机XFF+IP代理+限时次 目录扫描
+简单介绍：随机UA+随机XFF+自动IP代理+限时次 目录扫描
 
 工具借用了以下2位师傅@M0ge和@pingc0y的产品，两位大佬🐮。
 
@@ -56,9 +56,7 @@
 
     python3 dirscan_d.py -u http://172.16.70.129:80 -d dic/test.txt
     python3 dirscan_d.py -u http://172.16.70.129:80
-    python3 dirscan_d.py -u http://172.16.70.129:80 -d dic/test.txt -s 50
-    python3 dirscan_d.py -u http://172.16.70.129:80  -s 50
-    python3 dirscan_d.py -f urllist.txt -d dic/test.txt
+    python3 dirscan_d.py -f urllist.txt -d dic/test.txt -s 50
     python3 dirscan_d.py -f urllist.txt
     .........
     
@@ -75,9 +73,7 @@
 
     python3 dirscan_d.py -u http://172.16.70.129:80 -d dic/test.txt -p http://127.0.0.1:8111
     python3 dirscan_d.py -u http://172.16.70.129:80 -p http://127.0.0.1:8111
-    python3 dirscan_d.py -u http://172.16.70.129:80 -d dic/test.txt -s 50 -p http://127.0.0.1:8111
-    python3 dirscan_d.py -u http://172.16.70.129:80  -s 50 -p http://127.0.0.1:8111
-    python3 dirscan_d.py -f urllist.txt -d dic/test.txt -p http://127.0.0.1:8111
+    python3 dirscan_d.py -f urllist.txt -d dic/test.txt -p http://127.0.0.1:8111 -s 50
     .........
 
 网站服务器后台记录为不断更改的ip
