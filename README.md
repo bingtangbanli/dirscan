@@ -20,10 +20,10 @@
 
 1、根据自己的电脑自行下载https://github.com/pingc0y/go_proxy_pool 对应的版本
 
-调整代理的配置文件config.yml，个人建议将tunnelTime: 60 改为tunnelTime: 2 。2秒换一次ip。其他的参数按个人需求调整
+调整代理的配置文件config.yml，个人建议将tunnelTime: 60 改为tunnelTime: 10 。其他的参数按个人需求调整
 
       #隧道代理更换时间秒
-      tunnelTime: 2
+      tunnelTime: 10
 
 
 启动代理池
