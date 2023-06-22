@@ -69,7 +69,7 @@
 
 <img width="658" alt="图片" src="https://github.com/bingtangbanli/dirscan/assets/77956516/c26e78e0-42ae-4007-92dd-0e43a2796877">
 
-### 增加代理扫描-使用示例
+### 增加代理扫描-使用示例(测试发现mac上跑的没windows快)
 
 使用代理扫描速度会受到go_proxy_pool工具代理的影响
 
@@ -82,7 +82,8 @@
 
 网站服务器后台记录为不断更改的ip
 
-![图片](https://github.com/bingtangbanli/dirscan/assets/77956516/f598e46b-9c53-4922-818d-22e4ebed137a)
+<img width="554" alt="图片" src="https://github.com/bingtangbanli/dirscan/assets/77956516/8f032aeb-143b-4858-92c7-6e2344488020">
+
 
 （2）dirscan_s.py 随机UA+随机XFF+IP代理+多线程
 
