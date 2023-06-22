@@ -1,0 +1,10 @@
+/dirmap-master/lib
+/dirmap-master/data
+/dirmap-master/doc
+/dirmap-master
+/dirmap-master/thirdlib
+/dirsearch-master
+/dirsearch-master/db
+/dirsearch-master/lib
+/dirsearch-master/tests
+dirsearch-master/test
